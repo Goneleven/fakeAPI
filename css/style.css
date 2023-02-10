@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+
+}
+
+.body-index {
+    height: 100vh;
+    background: no-repeat center/cover url('../imagens/Background.png');
+    color: white;
+
+}
+
+/* Animação do Botão e o Botão: */
+
+button {
+
+    border-radius: 15px;
+    margin: 1em;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+
+    background: linear-gradient(to right, rgb(125, 90, 168), rgb(214, 199, 225), rgb(243, 238, 255));
+    background-size: 500% 100%;
+
+    animation-name: buttonBackground;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes buttonBackground {
+    0% {
+        background-position-x: 0%;
+    }
+
+    100% {
+        background-position-x: 100%;
+    }
+}
+
+/* ______________________________ */
+
+/* Animação do Botão com o MOUSE: */
+
+.botao {
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.botao:after {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.botao:hover {
+    transform: scale(1.25, 1.25);
+}
+
+.botao:hover::after {
+    opacity: 1;
+}
+
+/* ______________________________ */
+
+.container-main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+
+}
+
+.header-content {
+    max-width: 400px;
+    margin: 150px auto;
+    color: white;
+    text-align: center;
+}
+
+.elemento-main {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10%;
+}
+
+fieldset {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    border: 2.5px solid black
+}
+
+#imagem {
+    padding-top: 10px;
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding-top: 30%;
+
+}
+
+.elemento {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Separação */
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin: auto 30px;
+}
+
+nav h1 {
+    font-weight: bold;
+    color: black;
+}
